@@ -4,7 +4,10 @@ const reducer = function( state = {
 },action){
     switch(action.type){
         case 'LOGIN':
-            return Object.assign({}, state, {
+            localStorage.setItem('tokenJWT',action.payload.token)
+            localStorage.setItem('User_id',action.payload.user._id)
+            localStorage.setItem('User_name',action.payload.user.user_name)            
+                return Object.assign({}, state, {
                 isLogged: true,
                 user: action.payload
             });
