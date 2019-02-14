@@ -1,7 +1,5 @@
 export const  logUser = (data) => {
-    const token = localStorage.getItem('token');
-
-    return {
+       return {
         type: 'LOGIN',
         payload: data
     }
