@@ -1,4 +1,6 @@
 export const  logUser = (data) => {
+    const token = localStorage.getItem('token');
+
     return {
         type: 'LOGIN',
         payload: data
@@ -17,7 +19,7 @@ export const login = (username, password,dispatch) => {
             body: JSON.stringify(data)
         })
         .then(response => response.json())
-        .then(data => dispatchEvent(logUser(data)))
+        .then(data => dispatch(logUser(data,dispatch)))
         .catch(error => console.log(error));
         
 

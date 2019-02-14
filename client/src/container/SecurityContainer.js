@@ -9,8 +9,7 @@ class SecurityContainer extends React.Component{
 
     handleSubmit = (data) => {
         console.log(data);
-        //this.props.dispatch(data.username,data.password,this.props.dispatch);
-        this.props.login(data.username,data.password);
+        this.props.login(data.username,data.password,this.props.dispatch);        
         }
      
     render(){
