@@ -29,8 +29,14 @@ router.post('/', function(req, res) {
 });
 
 // update bakery
-router.post('/:id ', function(req, res) {
-	Bakery.update({_id: req.params.id}, req.body).then(data => res.send(data))
+router.put('/:bakery_id ', function(req, res) {
+	Bakery.update({_id: req.params.bakery_id}, req.body).then(data => data ? res.status(201).send(data) : rend.sendStatus(404))
+	.catch(data => rend.sendStatus(400));
+});
+
+//delete bakery
+router.delete('/:bakery_id', function (req, res) {
+  User.remove({_id: req.params.bakery_id}).then(data => data ? res.status(201).send(data) : rend.sendStatus(404))
 	.catch(data => rend.sendStatus(400));
 });
 
