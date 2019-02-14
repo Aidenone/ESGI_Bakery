@@ -1,7 +1,7 @@
 const verifyJWTToken = require('../libs/auth').verifyToken;
 
 const verifyToken = (req, res, next) => {
-    if(req.path === "/login_check") { : //rajouter connexion route (avec not in)
+    if(req.path === "/login_check") { //rajouter connexion route (avec not in)
         next();
     } else {
         const auth = req.get('Authorization');
