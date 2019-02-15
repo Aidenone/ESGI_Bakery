@@ -18,7 +18,7 @@ router.post('/', function(req, res) {
 			console.log(error);
 			res.sendStatus(400);
 		}
-		res.sendStatus(201);
+		res.status(201).send(result);
 	});
 });
 

@@ -21,7 +21,6 @@ function ContainedButtons(props) {
       <Button variant="contained" component={Link} to="/security/login"  className={classes.button}>
         Login
       </Button>
-
       { localStorage.tokenJWT && <React.Fragment>
       <Button variant="contained" component={Link} to="/bakery"  className={classes.button}>
         Bakery List
@@ -34,10 +33,7 @@ function ContainedButtons(props) {
       {
       !localStorage.tokenJWT && "not connected"
       } 
-      
-      
-
-      
+    
     </div>
   );
 }
