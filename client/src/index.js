@@ -9,8 +9,8 @@ import rootReducer from "./redux/reducers";
 
 const store = createStore(rootReducer);
 
-if(localStorage.tokenJWT && localStorage.User_id && localStorage.User_name){
-    const username = localStorage.getItem('User_name');
+if(localStorage.tokenJWT && localStorage.user_id && localStorage.user_name){
+    const username = localStorage.getItem('user_name');
     console.log('Hello ' + username);
 }
 else{
