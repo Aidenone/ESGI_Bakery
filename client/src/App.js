@@ -14,13 +14,15 @@ class App extends Component {
       maxHeight:50,   
       maxWidth: "100%"   
     }
-  
-
+    const user = localStorage.getItem("user_name");
+    console.log(user);
+    const message = user ? <h2> Bienvenue : {user}</h2> : '';
     return (
     <BrowserRouter>
       <div className="App">
         <header className="App-header">
                <img src={logo} className="App-logo" alt="logo" style={styles} />
+               { message }
           <ProfileBanner/>
          
                    
