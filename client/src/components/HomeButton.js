@@ -21,6 +21,9 @@ function ContainedButtons(props) {
       <Button variant="contained" component={Link} to="/security/login"  className={classes.button}>
         Login
       </Button>
+      <Button variant="contained" component={Link} to="/security/register"  className={classes.button}>
+        Register
+      </Button>
       
       <Button variant="contained" component={Link} to="/bakery"  className={classes.button}>
         Bakery List
