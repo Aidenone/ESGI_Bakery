@@ -24,6 +24,7 @@ class SecurityContainer extends React.Component{
             <Switch>
                 <Route path="/security/login" render={() => <LoginForm onSubmit={this.handleSubmitLogin}/>}/>
                 <Route path="/security/register" render={() => <RegisterForm onSubmit={this.handleSubmitRegister}/>}/>
+                <Route path="/security/deconnexion" render={() => <RegisterForm onSubmit={this.handleSubmitDeconnexion}/>}/>
             </Switch>           
         );
     }

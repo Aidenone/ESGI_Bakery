@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from './baguette-pain-png-2.png';
 import './App.css';
 import {BrowserRouter, Route, Link, Switch} from 'react-router-dom';
 import SecurityContainer from './container/SecurityContainer';
@@ -11,8 +11,7 @@ class App extends Component {
 
   render() {
     const styles= {
-      maxHeight:50,   
-      maxWidth: "100%"   
+      width:200  
     }
     const user = localStorage.getItem("user_name");
     console.log(user);

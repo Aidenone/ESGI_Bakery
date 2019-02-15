@@ -13,6 +13,9 @@ const styles = theme => ({
   },
 });
 
+function deconnexion(){
+  localStorage.clear();
+}
 function ContainedButtons(props) {
   const { classes } = props;
   return (
@@ -26,7 +29,7 @@ function ContainedButtons(props) {
         Bakery List
       </Button>
 
-      <Button variant="contained" component={Link} to="/security/deconnexion"  className={classes.button}>
+      <Button variant="contained" className={classes.button} onClick={deconnexion}>
         Deconnexion
       </Button>
       </React.Fragment>}
