@@ -27,25 +27,25 @@ export const login = (username, password, dispatch) => {
         }
 }; 
 
-export const register = (username, password, address, dispatch) => {
+export const register = (user_name, password, email, dispatch) => {
     const data = {
-        username, 
+        user_name, 
         password,
-        address
+        email
     };
     console.log(JSON.stringify(data));
     let myHeaders = new Headers();
-    // myHeaders.append("Content-type", "application/json");
-    //     fetch ('http://localhost:3000/user',
-    //     {
-    //         method:'POST',
-    //         mode: "cors",
-    //         headers : myHeaders,
-    //         body: JSON.stringify(data)
-    //     })
-    //     .then(response => response.json())
-    //     .then(data => dispatchEvent(logUser(data)))
-    //     .catch(error => console.log(error));
+    myHeaders.append("Content-type", "application/json");
+    myHeaders.append("Authorization", "Bearer "+localStorage.getItem('tokenJWT'));
+        fetch ('http://localhost:3000/user',
+        {
+            method:'POST',
+            mode: "cors",
+            headers : myHeaders,
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .catch(error => console.log(error));
 
         //appeler login ?
         

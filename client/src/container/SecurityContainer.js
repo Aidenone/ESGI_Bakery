@@ -16,7 +16,7 @@ class SecurityContainer extends React.Component{
 
     handleSubmitRegister = (data) => {
         console.log(data);
-        this.props.register(data.username,data.password,data.city);
+        this.props.register(data.user_name,data.password,data.email);
     }
      
     render(){
@@ -32,7 +32,7 @@ class SecurityContainer extends React.Component{
 const mapDispatchToProps = dispatch => {
     return {
         login: (username, password) => dispatch(login(username, password, dispatch)),
-        register: (username, password, city) => dispatch(register(username, password, city, dispatch))
+        register: (user_name, password, email) => dispatch(register(user_name, password, email, dispatch))
     }
 }
 

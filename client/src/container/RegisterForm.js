@@ -3,7 +3,7 @@ import React from 'react';
 export default class RegisterForm extends React.Component{
 
     state = {
-        username:"",
+        user_name:"",
         password:"",
         address: {
         	city:""
@@ -37,7 +37,7 @@ export default class RegisterForm extends React.Component{
         return(
           <form onSubmit={this.handleSubmit}>
               <label>Username</label>
-              <input onKeyUp={(event) => this.handleKeyUp(event,'username')}/>
+              <input onKeyUp={(event) => this.handleKeyUp(event,'user_name')}/>
               <label>Password</label>
               <input type="password" onKeyUp={(event) => this.handleKeyUp(event,'password')}/>
               <label>Email</label>
