@@ -1,13 +1,6 @@
 import React from 'react';
+import BakeryItem from './BakeryItem.js';
 
-export default class BakeryList extends React.Component{
+const BakeryList = ({bakery:bakeries}) => bakeries.map(bakery => <BakeryItem bakery={bakery} />);
 
-    render(){
-
-    //const listBakery = data.map((d) => <li key={d.name}>{d.name}</li>);
-
-        return <h1>List Bakery</h1>
-
-        
-    }
-}
+export default BakeryList;

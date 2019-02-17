@@ -15,17 +15,24 @@ class App extends Component {
       maxWidth: "100%"   
     }
   
+    const isConnected = ({}) => {
+      if(localStorage.tokenJWT && localStorage.User_id && localStorage.User_name){
+        const username = localStorage.getItem('User_name');
+        console.log('Hello ' + username);
+    }
+    else{
+        console.log("No token  or token expired")
+    }
+    };
 
     return (
     <BrowserRouter>
       <div className="App">
         <header className="App-header">
                <img src={logo} className="App-logo" alt="logo" style={styles} />
-          <ProfileBanner/>
-         
-                   
-          
+          <ProfileBanner/>             
         <HomeButton />
+        
           <Switch>
             <Route path="/bakery" component={BakeryContainer}/>              
             <Route path="/security" component={SecurityContainer}/>
